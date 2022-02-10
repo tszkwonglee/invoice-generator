@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="invoice-header">
+          <h1 class="margin-bottom-s">Invoice Creator</h1>
+          <p class="text-m text-weight-regular">
+            Thanks for choosing GoodCorp, LLC!
+          </p>
+        </div>
+        <div class="invoice-body-wrapper">
+          <div class="service-btn-wrapper margin-bottom-l">
+            <button id="service-btn-1" class="service-btn">
+              Wash Car: $10
+            </button>
+            <button id="service-btn-2" class="service-btn">
+              Mow Lawn: $20
+            </button>
+            <button id="service-btn-3" class="service-btn">
+              Pull Weeds: $30
+            </button>
+          </div>
+          <div class="pricing-item">
+            <h6>TASK</h6>
+            <h6>TOTAL</h6>
+          </div>
+          <div id="task-list" class="pricing-wrapper">
+            <div class="pricing-item">
+              <div class="task">
+                <h2>Wash Car</h2>
+                <a class="remove-link" href="#">Remove</a>
+              </div>
+              <p class="price-text-m">
+                <span class="dollar-sign-gray">$</span>10
+              </p>
+            </div>
+          </div>
+          <div class="divider margin-bottom-m"></div>
+          <div class="pricing-footer margin-bottom-l">
+            <div class="notes">
+              <h6 class="text-weight-regular margin-bottom-s">NOTES</h6>
+              <p class="text-s">We accept cash, credit card, or PayPal</p>
+            </div>
+            <div class="total">
+              <h6 class="text-weight-regular margin-bottom-s">TOTAL AMOUNT</h6>
+              <p id="total" class="price-text-l">$60</p>
+            </div>
+          </div>
+          <button id="send-btn" class="btn-main text-m">
+            <img class="margin-right-s" src="img/mail-icon.png" />Send Invoice
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
