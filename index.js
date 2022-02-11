@@ -79,42 +79,33 @@ function renderTask() {
   }
 }
 
-// function addRemoveLinkListener(service) {
-//   if (service === service1) {
-//     removeLink1 = document.getElementById("remove-link-1");
-//     console.log(removeLink1);
-//     removeLink1.addEventListener("click", function () {
-//       console.log("Remove Service 1");
-//       clear(service1);
-//     });
-//   } else if (service === service2) {
-//     removeLink2 = document.getElementById("remove-link-2");
-//     console.log(removeLink2);
-//     removeLink1.addEventListener("click", function () {
-//       console.log("Remove Service 2");
-//       clear(service2);
-//     });
-//   } else {
-//     removeLink3 = document.getElementById("remove-link-3");
-//     removeLink3.addEventListener("click", function () {
-//       clear(service3);
-//     });
-//   }
-// }
-
 /* Remove Service from array */
-function clear() {
-  console.log("Enter Clear function");
-  // let index = 0;
-  // if (serviceNum === 1) {
-  //   index = getElementIndex(currentServices, service1);
-  // }
 
-  // console.log("Index is" + index);
-  // if (index > -1) {
-  //   currentServices.splice(index, 1);
-  // }
-  // render();
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.id == "remove-link-1") {
+    clear(1);
+  } else if (e.target && e.target.id == "remove-link-2") {
+    clear(2);
+  } else if (e.target && e.target.id == "remove-link-3") {
+    clear(3);
+  }
+});
+
+function clear(serviceNum) {
+  // console.log("Enter Clear function");
+  let index = 0;
+  if (serviceNum === 1) {
+    index = getElementIndex(currentServices, service1);
+  } else if (serviceNum === 2) {
+    index = getElementIndex(currentServices, service2);
+  } else {
+    index = getElementIndex(currentServices, service3);
+  }
+
+  if (index > -1) {
+    currentServices.splice(index, 1);
+  }
+  render();
 }
 
 /* Helper Functions */
